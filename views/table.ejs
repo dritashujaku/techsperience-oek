@@ -1,0 +1,35 @@
+<%- include('partials/header', {title: "Companies", header: "Companies"}); %>
+
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+	      <tr>
+	      	<th>Registration nr.</th>
+	        <th>Name</th>
+	        <th>Municipality</th>
+	        <th>Address</th>
+	        <th>Website</th>
+	        <th>Description</th>
+	        <th></th>
+	      </tr>
+	    </thead>
+	    <% companies.forEach(function(company) { %>
+	    <tr>
+	    	<td><%= company.number %></td>
+	    	<td><%= company.name %></td>
+	    	<td><%= company.municipality %></td>
+	    	<td><%= company.address %></td>
+	    	<td><%= company.website %></td>
+	    	<td><%= company.description %></td>
+	    	<td>
+	    		<a href="/"><img src="/add.png" width="22" height="22"/></a>
+	    		<a href="/companies/<%= company._id %>"><img src="/edit.png" width="22" height="22"/></a>
+	    		<a href="/companies/delete/<%= company._id %>"><img src="/delete.png" width="22" height="22"/></a>
+	    	</td>
+	    </tr>
+	    <% }); %>
+	</table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<%- include('partials/footer'); %>

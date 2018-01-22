@@ -1,0 +1,91 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+
+}
+/*31DA89*/
+header {
+	background-color: #51df9b;
+	/*rgb(49, 218, 137)*/
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	padding: 15px; 
+}
+
+.container {
+	margin-top: 100px;
+}
+
+.form-control {
+	padding: 2px;
+	font-size: 16px;
+	border-width: 0 0 1px;
+	border-bottom-color: rgba(0,0,0,0.25);
+	box-shadow: none;
+	border-radius: 1px;
+	transition: 0.2s ease all;
+	margin-bottom: 15px;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+.form-control:focus {
+	border-color: #51df9b;
+	box-shadow:none;
+}
+
+#sel {
+	color: #999;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url('arrow.png') no-repeat;
+	background-size: 10px;
+	background-position: calc(100% - 10px);
+}
+
+.button-group {
+	margin-top: 40px;
+}
+
+.btn {
+	width: 100%;
+	margin-bottom: 25px;
+	border-radius: 10px;
+}
+
+.btn[type=submit] {
+	background-color: #4cd493;
+	border-color: transparent;
+}
+
+button[type="reset"], button[type="reset"]:hover {
+	color: grey;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th {
+	vertical-align: inherit;
+}
+
+a {
+	cursor: pointer;
+}
+
+@media (max-width: 991px) {
+	.form-group {
+		width:450px;
+		margin:auto;
+	}
+	button[type=reset] {
+		display:none;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-group {
+		width:350px;
+		margin:auto;
+	}
+}
