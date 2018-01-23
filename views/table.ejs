@@ -10,7 +10,7 @@
 	        <th>Address</th>
 	        <th>Website</th>
 	        <th>Description</th>
-	        <th></th>
+	        <th><a href="/"><img src="/add.png"/></a></th>
 	      </tr>
 	    </thead>
 	    <% companies.forEach(function(company) { %>
@@ -22,7 +22,6 @@
 	    	<td><%= company.website %></td>
 	    	<td><%= company.description %></td>
 	    	<td>
-	    		<a href="/"><img src="/add.png"/></a>
 	    		<a href="/companies/<%= company._id %>"><img src="/edit.png"/></a>
 	    		<a href="/companies/delete/<%= company._id %>"><img src="/delete.png"/></a>
 	    	</td>
