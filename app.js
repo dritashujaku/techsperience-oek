@@ -79,16 +79,16 @@ app.get('/companies/:id', function(req, res) {
 app.post('/companies/update/:id', function(req, res) {
    // Code for updating one specific company and return as JSON
     var updatedCompany = {
-        name: req.params.name,
-        address: req.params.address,
-        municipality: req.params.municipality,
-        email: req.params.email,
-        password: req.params.password,
-        website: req.params.website,
-        number: req.params.number,
-        description: req.params.description
+        name: req.body.name,
+        address: req.body.address,
+        municipality: req.body.municipality,
+        email: req.body.email,
+        password: req.body.password,
+        website: req.body.website,
+        number: req.body.number,
+        description: req.body.description
     };
-    Company.findOneAndUpdate({_id: req.params.id}, updatedcompany, {new:true}, function(err, company) {
+    Company.findOneAndUpdate({_id: req.params.id}, updatedCompany, {new:true}, function(err, company) {
         if (err) 
             console.log(err);
         //res.json(company);

@@ -1,7 +1,7 @@
 <%- include('partials/header', {title: "Edit Company", header: "Edit Company Info"}); %>
 
 <div class="container">
-	<form method="post" action="/companies/update/<%= company._id %>">
+	<form method="post" action="/companies/update/<%=company._id%>">
 		<div class="form-group row">
 			<div class="col-md-3 col-md-offset-3">
 				<input type="text" class="form-control" name="name" placeholder="Company Name" value="<%=company.name%>" autofocus>
@@ -13,7 +13,7 @@
 		<div class="form-group row">
 			<div class="col-md-3 col-md-offset-3">
 				<select id="sel" class="form-control" name="municipality">
-					<option selected disabled><%=company.municipality%></option>
+					<option selected><%=company.municipality%></option>
 				</select>
 			</div>
 			<div class="col-md-3">

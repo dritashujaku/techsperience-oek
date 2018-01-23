@@ -61,6 +61,10 @@ input[type=number] {
 	border-color: transparent;
 }
 
+.btn[type=submit]:hover {
+	background-color: #3bc382;
+}
+
 button[type="reset"], button[type="reset"]:hover {
 	color: grey;
 }
@@ -71,6 +75,11 @@ button[type="reset"], button[type="reset"]:hover {
 
 a {
 	cursor: pointer;
+}
+
+img {
+	width: 22px;
+	height: 22px;
 }
 
 @media (max-width: 991px) {
